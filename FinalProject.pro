@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     brand.cpp \
+    car.cpp \
     client.cpp \
     human.cpp \
     main.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 
 HEADERS += \
     brand.h \
+    car.h \
     client.h \
     human.h \
     mainwindow.h \
