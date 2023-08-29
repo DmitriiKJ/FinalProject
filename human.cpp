@@ -18,25 +18,25 @@ Human::Human(QString f, QString m, QString l, QString p)
 
 void Human::set_first_name(QString n)
 {
-    if(n.size() == 0) throw ("First name is empty!");
+    if(n.isEmpty()) throw ("First name is empty!");
     first_name = n;
 }
 
 void Human::set_middle_name(QString n)
 {
-    if(n.size() == 0) throw ("Middle name is empty!");
+    if(n.isEmpty()) throw ("Middle name is empty!");
     middle_name = n;
 }
 
 void Human::set_last_name(QString n)
 {
-    if(n.size() == 0) throw ("Last name is empty!");
+    if(n.isEmpty()) throw ("Last name is empty!");
     last_name = n;
 }
 
 void Human::set_phone_number(QString n)
 {
-    if(n.size() == 0) throw ("Phone number is empty!");
+    if(n.isEmpty()) throw ("Phone number is empty!");
     phone_number= n;
 }
 
