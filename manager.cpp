@@ -8,7 +8,8 @@ Manager::Manager()
 
 Manager::Manager(QString f, QString m, QString l, QString p, QDate d, int e):Human(f, m, l, p)
 {
-
+    set_birthday(d);
+    set_experience(e);
 }
 
 void Manager::set_birthday(QDate d)
