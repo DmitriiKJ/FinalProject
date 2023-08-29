@@ -12,12 +12,14 @@ SOURCES += \
     client.cpp \
     human.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    manager.cpp
 
 HEADERS += \
     client.h \
     human.h \
-    mainwindow.h
+    mainwindow.h \
+    manager.h
 
 FORMS += \
     mainwindow.ui
