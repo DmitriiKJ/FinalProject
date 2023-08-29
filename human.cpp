@@ -10,15 +10,10 @@ Human::Human()
 
 Human::Human(QString f, QString m, QString l, QString p)
 {
-    if(f.size() == 0) throw ("First name is empty!");
-    if(m.size() == 0) throw ("Middle name is empty!");
-    if(l.size() == 0) throw ("Last name is empty!");
-    if(p.size() == 0) throw ("Phone number is empty!");
-
-    first_name = f;
-    middle_name = m;
-    last_name = l;
-    phone_number = p;
+    set_first_name(f);
+    set_middle_name(m);
+    set_last_name(l);
+    set_phone_number(p);
 }
 
 void Human::set_first_name(QString n)

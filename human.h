@@ -25,7 +25,7 @@ public:
     QString get_phone_number()const;
 
     //Чисто виртуальный метод
-    virtual void show()const = 0;
+    virtual QString type()const = 0;
 };
 
 #endif // HUMAN_H
