@@ -29,6 +29,8 @@ public:
     QVector<Brand*> get_brands()const;
     QVector<Buy*> get_buys()const;
 
+
+    ~AutoShop();
 };
 
 #endif // AUTOSHOP_H
