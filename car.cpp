@@ -1,8 +1,27 @@
 #include "car.h"
 
+Car::Car()
+{
+    model = "Empty";
+    body = "Empty";
+    price = 0;
+    engine_model = "Empty";
+    engine_type = "Empty";
+    power = 0;
+    year = 1;
+}
+
 Car::Car(QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma)
 {
-
+    set_model(m);
+    set_body(b);
+    set_price(p);
+    set_engine_model(em);
+    set_engine_type(et);
+    set_power(power);
+    set_brand(br);
+    set_year(year);
+    set_manager(ma);
 }
 
 void Car::set_model(QString m)

@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     brand.cpp \
+    buy.cpp \
     car.cpp \
     client.cpp \
     human.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     brand.h \
+    buy.h \
     car.h \
     client.h \
     human.h \

@@ -17,6 +17,7 @@ class Car
     Manager manager;
 
 public:
+    Car();
     Car(QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma);
 
     void set_model(QString m);
