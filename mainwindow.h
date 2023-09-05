@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +17,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void show_cars()const;
+
 private:
     Ui::MainWindow *ui;
+    QSqlDatabase db;
+    QSqlQuery* query;
 };
 #endif // MAINWINDOW_H
