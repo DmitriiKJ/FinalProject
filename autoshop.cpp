@@ -30,6 +30,36 @@ QVector<Buy *> AutoShop::get_buys() const
     return buys;
 }
 
+void AutoShop::add_manager(QString f, QString m, QString l, QString p, QDate d, int e)
+{
+    Manager* tmp = new Manager(f,m,l,p,d,e);
+    managers.push_back(tmp);
+}
+
+void AutoShop::add_client(QString f, QString m, QString l, QString p, QString a)
+{
+    Client* tmp = new Client(f,m,l,p,a);
+    clients.push_back(tmp);
+}
+
+void AutoShop::add_car(QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma)
+{
+    Car* tmp = new Car(m,b,p,em,et,power,br,year,ma);
+    cars.push_back(tmp);
+}
+
+void AutoShop::add_brand(QString n, QString i)
+{
+    Brand* tmp = new Brand(n,i);
+    brands.push_back(tmp);
+}
+
+void AutoShop::add_buy_from_database(Client c, Car ca, QDate d)
+{
+    Buy*tmp = new Buy(c, ca, d);
+    buys.push_back(tmp);
+}
+
 AutoShop::~AutoShop()
 {
     for(int i = 0; i < buys.size(); i++)

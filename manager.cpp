@@ -21,7 +21,7 @@ void Manager::set_birthday(QDate d)
 
 void Manager::set_experience(int y)
 {
-    if(y > QDate::currentDate().year() - birthday.year() - 18) throw ("Too much experience for that age!"); // проверка на количество опыта для возраста (работа с полнолетия)
+    // проверка на количество опыта для возраста (работа с полнолетия) soon
     experience = y;
 }
 

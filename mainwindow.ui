@@ -22,8 +22,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>731</width>
-      <height>321</height>
+      <width>801</width>
+      <height>411</height>
      </rect>
     </property>
     <property name="sortingEnabled">
@@ -34,12 +34,7 @@
     </attribute>
     <column>
      <property name="text">
-      <string>New Column</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>New Column</string>
+      <string>Body</string>
      </property>
     </column>
     <column>
@@ -49,7 +44,7 @@
     </column>
     <column>
      <property name="text">
-      <string>New Column</string>
+      <string>Type engine</string>
      </property>
     </column>
     <column>
@@ -60,6 +55,11 @@
     <column>
      <property name="text">
       <string>Brand</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Year</string>
      </property>
     </column>
     <column>

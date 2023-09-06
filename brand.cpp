@@ -20,7 +20,6 @@ void Brand::set_name(QString n)
 
 void Brand::set_info(QString i)
 {
-    if(i.isEmpty()) throw ("Info is empty");
     info = i;
 }
 

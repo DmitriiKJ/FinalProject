@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include "autoshop.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,11 +18,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void show_cars()const;
+    void start();
 
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
     QSqlQuery* query;
+    AutoShop shop;
 };
 #endif // MAINWINDOW_H
