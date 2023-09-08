@@ -6,6 +6,7 @@
 
 class Car
 {
+    int ID;
     QString model;
     QString body;
     double price;
@@ -18,7 +19,7 @@ class Car
 
 public:
     Car();
-    Car(QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma);
+    Car(int i, QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma);
 
     void set_model(QString m);
     void set_body(QString b);
@@ -30,6 +31,7 @@ public:
     void set_year(int y);
     void set_manager(Manager m);
 
+    int get_ID()const;
     QString get_model()const;
     QString get_body()const;
     double get_price()const;

@@ -6,7 +6,7 @@ Manager::Manager()
     experience = 0;
 }
 
-Manager::Manager(QString f, QString m, QString l, QString p, QDate d, int e):Human(f, m, l, p)
+Manager::Manager(int i, QString f, QString m, QString l, QString p, QDate d, int e):Human(i, f, m, l, p)
 {
     set_birthday(d);
     set_experience(e);

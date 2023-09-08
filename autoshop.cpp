@@ -30,21 +30,21 @@ QVector<Buy *> AutoShop::get_buys() const
     return buys;
 }
 
-void AutoShop::add_manager(QString f, QString m, QString l, QString p, QDate d, int e)
+void AutoShop::add_manager(int i, QString f, QString m, QString l, QString p, QDate d, int e)
 {
-    Manager* tmp = new Manager(f,m,l,p,d,e);
+    Manager* tmp = new Manager(i, f,m,l,p,d,e);
     managers.push_back(tmp);
 }
 
-void AutoShop::add_client(QString f, QString m, QString l, QString p, QString a)
+void AutoShop::add_client(int i, QString f, QString m, QString l, QString p, QString a)
 {
-    Client* tmp = new Client(f,m,l,p,a);
+    Client* tmp = new Client(i, f,m,l,p,a);
     clients.push_back(tmp);
 }
 
-void AutoShop::add_car(QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma)
+void AutoShop::add_car(int i, QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma)
 {
-    Car* tmp = new Car(m,b,p,em,et,power,br,year,ma);
+    Car* tmp = new Car(i, m,b,p,em,et,power,br,year,ma);
     cars.push_back(tmp);
 }
 

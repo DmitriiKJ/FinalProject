@@ -29,9 +29,9 @@ public:
     QVector<Brand*> get_brands()const;
     QVector<Buy*> get_buys()const;
 
-    void add_manager(QString f, QString m, QString l, QString p, QDate d, int e);
-    void add_client(QString f, QString m, QString l, QString p, QString a);
-    void add_car(QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma);
+    void add_manager(int i, QString f, QString m, QString l, QString p, QDate d, int e);
+    void add_client(int i, QString f, QString m, QString l, QString p, QString a);
+    void add_car(int i, QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma);
     void add_brand(QString n, QString i);
     void add_buy_from_database(Client c, Car ca, QDate d);
 

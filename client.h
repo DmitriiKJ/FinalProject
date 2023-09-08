@@ -8,7 +8,7 @@ class Client : public Human
     QString address;
 public:
     Client();
-    Client(QString f, QString m, QString l, QString p, QString a);
+    Client(int i, QString f, QString m, QString l, QString p, QString a);
 
     void set_address(QString a);
 

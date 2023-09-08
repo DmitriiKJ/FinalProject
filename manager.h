@@ -11,7 +11,7 @@ class Manager : public Human
 
 public:
     Manager();
-    Manager(QString f, QString m, QString l, QString p, QDate d, int e);
+    Manager(int i, QString f, QString m, QString l, QString p, QDate d, int e);
 
     void set_birthday(QDate d);
     void set_experience(int y);

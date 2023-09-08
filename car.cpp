@@ -2,6 +2,7 @@
 
 Car::Car()
 {
+    ID = 0;
     model = "Empty";
     body = "Empty";
     price = 0;
@@ -11,8 +12,9 @@ Car::Car()
     year = 1;
 }
 
-Car::Car(QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma)
+Car::Car(int i, QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma)
 {
+    ID = i;
     set_model(m);
     set_body(b);
     set_price(p);
@@ -72,6 +74,11 @@ void Car::set_year(int y)
 void Car::set_manager(Manager m)
 {
     manager = m;
+}
+
+int Car::get_ID() const
+{
+    return ID;
 }
 
 QString Car::get_model() const

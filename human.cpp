@@ -2,14 +2,16 @@
 
 Human::Human()
 {
+    ID = 0;
     first_name = "Empty";
     middle_name = "Empty";
     last_name = "Empty";
     phone_number = "Empty";
 }
 
-Human::Human(QString f, QString m, QString l, QString p)
+Human::Human(int i, QString f, QString m, QString l, QString p)
 {
+    ID = i;
     set_first_name(f);
     set_middle_name(m);
     set_last_name(l);
@@ -38,6 +40,11 @@ void Human::set_phone_number(QString n)
 {
     if(n.isEmpty()) throw ("Phone number is empty!");
     phone_number= n;
+}
+
+int Human::get_ID() const
+{
+    return ID;
 }
 
 QString Human::get_first_name() const

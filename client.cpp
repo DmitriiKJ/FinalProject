@@ -5,7 +5,7 @@ Client::Client()
     address = "Empty";
 }
 
-Client::Client(QString f, QString m, QString l, QString p, QString a):Human(f, m, l, p)
+Client::Client(int i, QString f, QString m, QString l, QString p, QString a):Human(i, f, m, l, p)
 {
     set_address(a);
 }
