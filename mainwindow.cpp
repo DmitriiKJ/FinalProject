@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    showManager = new DialogManager();
 
     //Connect
     db = QSqlDatabase::addDatabase("QODBC");
@@ -20,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     {
         ui->statusbar->showMessage("CONECT");
         query = new QSqlQuery(db);
+        addManager = new DialogAddManager(db);
+        showManager = new DialogManager(db);
         start();
     }
     else
@@ -119,6 +120,6 @@ void MainWindow::start()
 void MainWindow::on_actionManagers_triggered()
 {
     showManager->show();
-    showManager->showMan(shop);
+    showManager->showMan();
 }
 

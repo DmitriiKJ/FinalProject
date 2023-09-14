@@ -6,6 +6,7 @@
 #include <QSqlQuery>
 #include "autoshop.h"
 #include "dialogmanager.h"
+#include "dialogaddmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,5 +31,6 @@ private:
     QSqlQuery* query;
     AutoShop shop;
     DialogManager* showManager;
+    DialogAddManager *addManager;
 };
 #endif // MAINWINDOW_H

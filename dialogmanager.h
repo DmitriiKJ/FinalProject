@@ -1,8 +1,10 @@
 #ifndef DIALOGMANAGER_H
 #define DIALOGMANAGER_H
 #include <autoshop.h>
-
+#include "dialogaddmanager.h"
 #include <QDialog>
+#include <QSqlDatabase>
+#include <QSqlQuery>
 
 namespace Ui {
 class DialogManager;
@@ -13,16 +15,18 @@ class DialogManager : public QDialog
     Q_OBJECT
 
 public:
-    explicit DialogManager(QWidget *parent = nullptr);
+    explicit DialogManager(QSqlDatabase &db, QWidget *parent = nullptr);
     ~DialogManager();
 
-    void showMan(AutoShop shop)const;
+    void showMan()const;
 
 private slots:
     void on_pushButton_clicked();
 
 private:
     Ui::DialogManager *ui;
+    DialogAddManager* addManager;
+    QSqlQuery* query;
 };
 
 #endif // DIALOGMANAGER_H
