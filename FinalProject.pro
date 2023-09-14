@@ -14,6 +14,8 @@ SOURCES += \
     buy.cpp \
     car.cpp \
     client.cpp \
+    dialogaddmanager.cpp \
+    dialogmanager.cpp \
     human.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,11 +27,15 @@ HEADERS += \
     buy.h \
     car.h \
     client.h \
+    dialogaddmanager.h \
+    dialogmanager.h \
     human.h \
     mainwindow.h \
     manager.h
 
 FORMS += \
+    dialogaddmanager.ui \
+    dialogmanager.ui \
     mainwindow.ui
 
 # Default rules for deployment.
