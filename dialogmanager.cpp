@@ -13,6 +13,8 @@ DialogManager::DialogManager(QSqlDatabase &db, QWidget *parent) :
 DialogManager::~DialogManager()
 {
     delete ui;
+    delete addManager;
+    delete query;
 }
 
 void DialogManager::showMan() const
@@ -61,5 +63,6 @@ void DialogManager::showMan() const
 void DialogManager::on_pushButton_clicked()
 {
     addManager->show();
+    this->close();
 }
 

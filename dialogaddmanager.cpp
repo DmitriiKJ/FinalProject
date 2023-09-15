@@ -14,6 +14,7 @@ DialogAddManager::DialogAddManager(QSqlDatabase &db, QWidget *parent) :
 DialogAddManager::~DialogAddManager()
 {
     delete ui;
+    delete query;
 }
 
 void DialogAddManager::on_pushButton_addManager_clicked()
@@ -24,21 +25,24 @@ void DialogAddManager::on_pushButton_addManager_clicked()
     QString date = ui->dateEdit_birthday->date().toString("yyyy-MM-dd");
     QString phone = ui->lineEdit_Number->text();
 
-    QSqlQuery query;
-    query.prepare("EXEC addManager :f, :m, :l, :d, :p");
-    query.bindValue(":f", first);
-    query.bindValue(":m", middle);
-    query.bindValue(":l", last);
-    query.bindValue(":d", date);
-    query.bindValue(":p", phone);
+    query->prepare("EXEC addManager :f, :m, :l, :d, :p");
+    query->bindValue(":f", first);
+    query->bindValue(":m", middle);
+    query->bindValue(":l", last);
+    query->bindValue(":d", date);
+    query->bindValue(":p", phone);
 
-    if (query.exec()) {
+    if (query->exec()) {
         qDebug() << "Менеджер успешно добавлен.";
     } else {
-        qDebug() << "Ошибка SQL: " << query.lastError().text();
-                                            qDebug() << "Код ошибки: " << query.lastError().nativeErrorCode();
+        qDebug() << "Ошибка SQL: " << query->lastError().text();
+        qDebug() << "Код ошибки: " << query->lastError().nativeErrorCode();
     }
 
+    ui->lineEdit_First->setText("");
+    ui->lineEdit_Middle->setText("");
+    ui->lineEdit_Last->setText("");
+    ui->lineEdit_Number->setText("");
     this->close();
 }
 

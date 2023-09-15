@@ -83,6 +83,7 @@
      <string>Menu</string>
     </property>
     <addaction name="actionManagers"/>
+    <addaction name="actionClients"/>
    </widget>
    <addaction name="menuMenu"/>
   </widget>
@@ -90,6 +91,11 @@
   <action name="actionManagers">
    <property name="text">
     <string>Managers</string>
+   </property>
+  </action>
+  <action name="actionClients">
+   <property name="text">
+    <string>Clients</string>
    </property>
   </action>
  </widget>

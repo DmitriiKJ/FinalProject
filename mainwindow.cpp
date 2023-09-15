@@ -19,8 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     {
         ui->statusbar->showMessage("CONECT");
         query = new QSqlQuery(db);
-        addManager = new DialogAddManager(db);
         showManager = new DialogManager(db);
+        showClient = new DialogClient(db);
         start();
     }
     else
@@ -32,7 +32,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    delete query;
     delete ui;
+    delete showManager;
+    delete showClient;
 }
 
 void MainWindow::start()
@@ -121,5 +124,12 @@ void MainWindow::on_actionManagers_triggered()
 {
     showManager->show();
     showManager->showMan();
+}
+
+
+void MainWindow::on_actionClients_triggered()
+{
+    showClient->show();
+    showClient->showClient();
 }
 

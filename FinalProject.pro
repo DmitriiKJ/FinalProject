@@ -14,7 +14,9 @@ SOURCES += \
     buy.cpp \
     car.cpp \
     client.cpp \
+    dialogaddclients.cpp \
     dialogaddmanager.cpp \
+    dialogclient.cpp \
     dialogmanager.cpp \
     human.cpp \
     main.cpp \
@@ -27,14 +29,18 @@ HEADERS += \
     buy.h \
     car.h \
     client.h \
+    dialogaddclients.h \
     dialogaddmanager.h \
+    dialogclient.h \
     dialogmanager.h \
     human.h \
     mainwindow.h \
     manager.h
 
 FORMS += \
+    dialogaddclients.ui \
     dialogaddmanager.ui \
+    dialogclient.ui \
     dialogmanager.ui \
     mainwindow.ui
 
