@@ -16,9 +16,11 @@ SOURCES += \
     client.cpp \
     dialogaddbrand.cpp \
     dialogaddclients.cpp \
+    dialogaddengine.cpp \
     dialogaddmanager.cpp \
     dialogbrand.cpp \
     dialogclient.cpp \
+    dialogengine.cpp \
     dialogmanager.cpp \
     human.cpp \
     main.cpp \
@@ -33,9 +35,11 @@ HEADERS += \
     client.h \
     dialogaddbrand.h \
     dialogaddclients.h \
+    dialogaddengine.h \
     dialogaddmanager.h \
     dialogbrand.h \
     dialogclient.h \
+    dialogengine.h \
     dialogmanager.h \
     human.h \
     mainwindow.h \
@@ -44,9 +48,11 @@ HEADERS += \
 FORMS += \
     dialogaddbrand.ui \
     dialogaddclients.ui \
+    dialogaddengine.ui \
     dialogaddmanager.ui \
     dialogbrand.ui \
     dialogclient.ui \
+    dialogengine.ui \
     dialogmanager.ui \
     mainwindow.ui
 

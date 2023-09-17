@@ -85,6 +85,7 @@
     <addaction name="actionManagers"/>
     <addaction name="actionClients"/>
     <addaction name="actionBrands"/>
+    <addaction name="actionEngines"/>
    </widget>
    <addaction name="menuMenu"/>
   </widget>
@@ -102,6 +103,11 @@
   <action name="actionBrands">
    <property name="text">
     <string>Brands</string>
+   </property>
+  </action>
+  <action name="actionEngines">
+   <property name="text">
+    <string>Engines</string>
    </property>
   </action>
  </widget>
