@@ -26,7 +26,7 @@
     <string>Add</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -58,7 +58,11 @@
      </widget>
     </item>
     <item row="5" column="2">
-     <widget class="QLineEdit" name="lineEdit_address"/>
+     <widget class="QLineEdit" name="lineEdit_address">
+      <property name="maxLength">
+       <number>50</number>
+      </property>
+     </widget>
     </item>
     <item row="4" column="0">
      <widget class="QLabel" name="label_4">
@@ -75,16 +79,32 @@
      </widget>
     </item>
     <item row="4" column="2">
-     <widget class="QLineEdit" name="lineEdit_number"/>
+     <widget class="QLineEdit" name="lineEdit_number">
+      <property name="maxLength">
+       <number>20</number>
+      </property>
+     </widget>
     </item>
     <item row="3" column="2">
-     <widget class="QLineEdit" name="lineEdit_last"/>
+     <widget class="QLineEdit" name="lineEdit_last">
+      <property name="maxLength">
+       <number>20</number>
+      </property>
+     </widget>
     </item>
     <item row="0" column="2">
-     <widget class="QLineEdit" name="lineEdit_first"/>
+     <widget class="QLineEdit" name="lineEdit_first">
+      <property name="maxLength">
+       <number>20</number>
+      </property>
+     </widget>
     </item>
     <item row="1" column="2">
-     <widget class="QLineEdit" name="lineEdit_middle"/>
+     <widget class="QLineEdit" name="lineEdit_middle">
+      <property name="maxLength">
+       <number>20</number>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

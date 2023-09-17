@@ -14,6 +14,7 @@ DialogClient::~DialogClient()
 {
     delete ui;
     delete query;
+    delete addClient;
 }
 
 void DialogClient::showClient() const

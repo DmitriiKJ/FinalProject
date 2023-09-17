@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
         query = new QSqlQuery(db);
         showManager = new DialogManager(db);
         showClient = new DialogClient(db);
+        showBrand = new DialogBrand(db);
         start();
     }
     else
@@ -131,5 +132,12 @@ void MainWindow::on_actionClients_triggered()
 {
     showClient->show();
     showClient->showClient();
+}
+
+
+void MainWindow::on_actionBrands_triggered()
+{
+    showBrand->show();
+    showBrand->showBrands();
 }
 

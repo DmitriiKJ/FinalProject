@@ -7,6 +7,7 @@
 #include "autoshop.h"
 #include "dialogmanager.h"
 #include "dialogclient.h"
+#include "dialogbrand.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,6 +28,8 @@ private slots:
 
     void on_actionClients_triggered();
 
+    void on_actionBrands_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
@@ -34,5 +37,6 @@ private:
     AutoShop shop;
     DialogManager* showManager;
     DialogClient* showClient;
+    DialogBrand* showBrand;
 };
 #endif // MAINWINDOW_H
