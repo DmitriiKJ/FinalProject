@@ -14,7 +14,7 @@ Brand::Brand(QString n, QString i)
 
 void Brand::set_name(QString n)
 {
-    if(n.isEmpty())  throw ("Name is empty!");
+    if(n.isEmpty()) throw ("Name is empty!");
     name = n;
 }
 

@@ -18,7 +18,7 @@ public:
     explicit DialogModel(QSqlDatabase &db, QWidget *parent = nullptr);
     ~DialogModel();
 
-    void showModel();
+    void showModel()const;
 
 private slots:
     void on_pushButton_clicked();

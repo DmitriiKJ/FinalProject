@@ -17,7 +17,7 @@ DialogEngine::~DialogEngine()
     delete addEngine;
 }
 
-void DialogEngine::showEngine()
+void DialogEngine::showEngine() const
 {
     query->exec("SELECT * FROM Engine");
 

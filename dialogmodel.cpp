@@ -17,7 +17,7 @@ DialogModel::~DialogModel()
     delete addModel;
 }
 
-void DialogModel::showModel()
+void DialogModel::showModel() const
 {
     query->exec("SELECT * FROM Model");
 

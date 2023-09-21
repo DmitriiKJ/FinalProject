@@ -18,7 +18,7 @@ public:
     explicit DialogEngine(QSqlDatabase &db, QWidget *parent = nullptr);
     ~DialogEngine();
 
-    void showEngine();
+    void showEngine()const;
 
 private slots:
     void on_pushButton_add_clicked();
