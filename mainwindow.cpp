@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
         showClient = new DialogClient(db);
         showBrand = new DialogBrand(db);
         showEngine = new DialogEngine(db);
+        showModel = new DialogModel(db);
         start();
     }
     else
@@ -40,6 +41,7 @@ MainWindow::~MainWindow()
     delete showClient;
     delete showBrand;
     delete showEngine;
+    delete showModel;
 }
 
 void MainWindow::start()
@@ -149,5 +151,12 @@ void MainWindow::on_actionEngines_triggered()
 {
     showEngine->show();
     showEngine->showEngine();
+}
+
+
+void MainWindow::on_actionModels_triggered()
+{
+    showModel->show();
+    showModel->showModel();
 }
 

@@ -18,10 +18,12 @@ SOURCES += \
     dialogaddclients.cpp \
     dialogaddengine.cpp \
     dialogaddmanager.cpp \
+    dialogaddmodel.cpp \
     dialogbrand.cpp \
     dialogclient.cpp \
     dialogengine.cpp \
     dialogmanager.cpp \
+    dialogmodel.cpp \
     human.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -37,10 +39,12 @@ HEADERS += \
     dialogaddclients.h \
     dialogaddengine.h \
     dialogaddmanager.h \
+    dialogaddmodel.h \
     dialogbrand.h \
     dialogclient.h \
     dialogengine.h \
     dialogmanager.h \
+    dialogmodel.h \
     human.h \
     mainwindow.h \
     manager.h
@@ -50,10 +54,12 @@ FORMS += \
     dialogaddclients.ui \
     dialogaddengine.ui \
     dialogaddmanager.ui \
+    dialogaddmodel.ui \
     dialogbrand.ui \
     dialogclient.ui \
     dialogengine.ui \
     dialogmanager.ui \
+    dialogmodel.ui \
     mainwindow.ui
 
 # Default rules for deployment.

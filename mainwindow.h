@@ -9,6 +9,7 @@
 #include "dialogclient.h"
 #include "dialogbrand.h"
 #include "dialogengine.h"
+#include "dialogmodel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -33,6 +34,8 @@ private slots:
 
     void on_actionEngines_triggered();
 
+    void on_actionModels_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
@@ -42,5 +45,6 @@ private:
     DialogClient* showClient;
     DialogBrand* showBrand;
     DialogEngine* showEngine;
+    DialogModel* showModel;
 };
 #endif // MAINWINDOW_H
