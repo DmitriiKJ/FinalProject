@@ -1,10 +1,11 @@
 #ifndef DIALOGMANAGER_H
 #define DIALOGMANAGER_H
-#include <autoshop.h>
+
 #include "dialogaddmanager.h"
 #include <QDialog>
 #include <QSqlDatabase>
 #include <QSqlQuery>
+#include <QDate>
 
 namespace Ui {
 class DialogManager;

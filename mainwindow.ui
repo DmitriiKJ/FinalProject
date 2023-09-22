@@ -72,6 +72,7 @@ color: rgb(255, 85, 0);</string>
     <addaction name="actionEngines"/>
     <addaction name="actionModels"/>
     <addaction name="actionCars"/>
+    <addaction name="actionBuys"/>
    </widget>
    <addaction name="menuMenu"/>
   </widget>
@@ -104,6 +105,11 @@ color: rgb(255, 85, 0);</string>
   <action name="actionCars">
    <property name="text">
     <string>Cars</string>
+   </property>
+  </action>
+  <action name="actionBuys">
+   <property name="text">
+    <string>Buys</string>
    </property>
   </action>
  </widget>

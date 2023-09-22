@@ -11,6 +11,7 @@
 #include "dialogengine.h"
 #include "dialogmodel.h"
 #include "dialogcar.h"
+#include "dialogbuy.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,6 +40,8 @@ private slots:
 
     void on_actionCars_triggered();
 
+    void on_actionBuys_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
@@ -50,5 +53,6 @@ private:
     DialogEngine* showEngine;
     DialogModel* showModel;
     DialogCar* showCar;
+    DialogBuy* showBuy;
 };
 #endif // MAINWINDOW_H

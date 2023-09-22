@@ -19,7 +19,7 @@ DialogCar::~DialogCar()
 
 void DialogCar::showCar() const
 {
-    query->exec("SELECT c.Model, c.Brand, c.Year_, m.First_name, m.Middle_name, m.Last_name FROM Car c JOIN Manager m ON m.ID = c.Manager_ID");
+    query->exec("SELECT c.Model, c.Brand, c.Year_, m.First_name, m.Middle_name, m.Last_name FROM Car c JOIN Manager m ON m.ID = c.Manager_ID WHERE c.isSold is null");
 
     int i = 0;
     while(query->next())

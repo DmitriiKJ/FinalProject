@@ -25,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
         showEngine = new DialogEngine(db);
         showModel = new DialogModel(db);
         showCar = new DialogCar(db);
+        showBuy = new DialogBuy(db);
         start();
     }
     else
@@ -44,6 +45,7 @@ MainWindow::~MainWindow()
     delete showEngine;
     delete showModel;
     delete showCar;
+    delete showBuy;
 }
 
 void MainWindow::start()
@@ -125,5 +127,12 @@ void MainWindow::on_actionCars_triggered()
 {
     showCar->show();
     showCar->showCar();
+}
+
+
+void MainWindow::on_actionBuys_triggered()
+{
+    showBuy->show();
+    showBuy->showBuy();
 }
 

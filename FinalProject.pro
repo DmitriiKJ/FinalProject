@@ -15,12 +15,14 @@ SOURCES += \
     car.cpp \
     client.cpp \
     dialogaddbrand.cpp \
+    dialogaddbuy.cpp \
     dialogaddcar.cpp \
     dialogaddclients.cpp \
     dialogaddengine.cpp \
     dialogaddmanager.cpp \
     dialogaddmodel.cpp \
     dialogbrand.cpp \
+    dialogbuy.cpp \
     dialogcar.cpp \
     dialogclient.cpp \
     dialogengine.cpp \
@@ -38,12 +40,14 @@ HEADERS += \
     car.h \
     client.h \
     dialogaddbrand.h \
+    dialogaddbuy.h \
     dialogaddcar.h \
     dialogaddclients.h \
     dialogaddengine.h \
     dialogaddmanager.h \
     dialogaddmodel.h \
     dialogbrand.h \
+    dialogbuy.h \
     dialogcar.h \
     dialogclient.h \
     dialogengine.h \
@@ -55,12 +59,14 @@ HEADERS += \
 
 FORMS += \
     dialogaddbrand.ui \
+    dialogaddbuy.ui \
     dialogaddcar.ui \
     dialogaddclients.ui \
     dialogaddengine.ui \
     dialogaddmanager.ui \
     dialogaddmodel.ui \
     dialogbrand.ui \
+    dialogbuy.ui \
     dialogcar.ui \
     dialogclient.ui \
     dialogengine.ui \
