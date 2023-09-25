@@ -65,3 +65,8 @@ QString Human::get_phone_number() const
 {
     return phone_number;
 }
+
+Human::~Human()
+{
+
+}

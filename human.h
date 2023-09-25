@@ -28,6 +28,7 @@ public:
 
     //Чисто виртуальный метод
     virtual QString type()const = 0;
+    virtual ~Human();
 };
 
 #endif // HUMAN_H

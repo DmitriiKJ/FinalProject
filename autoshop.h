@@ -6,6 +6,7 @@
 #include "client.h"
 #include "manager.h"
 #include <QVector>
+#include <algorithm>
 
 class AutoShop
 {
@@ -35,7 +36,19 @@ public:
     void add_brand(QString n, QString i);
     void add_buy_from_database(Client c, Car ca, QDate d);
 
+    void sort_managers();
+    void sort_clients();
+    void sort_cars();
+    void sort_brands();
+    void sort_buys();
+
     ~AutoShop();
 };
+
+bool sort_manager(Manager* left, Manager* right);
+bool sort_client(Client* left, Client* right);
+bool sort_car(Car* left, Car* right);
+bool sort_brand(Brand* left, Brand* right);
+bool sort_buy(Buy* left, Buy* right);
 
 #endif // AUTOSHOP_H

@@ -60,6 +60,31 @@ void AutoShop::add_buy_from_database(Client c, Car ca, QDate d)
     buys.push_back(tmp);
 }
 
+void AutoShop::sort_managers()
+{
+    std::sort(managers.begin(), managers.end(), sort_manager);
+}
+
+void AutoShop::sort_clients()
+{
+    std::sort(clients.begin(), clients.end(), sort_client);
+}
+
+void AutoShop::sort_cars()
+{
+    std::sort(cars.begin(), cars.end(), sort_car);
+}
+
+void AutoShop::sort_brands()
+{
+    std::sort(brands.begin(), brands.end(), sort_brand);
+}
+
+void AutoShop::sort_buys()
+{
+    std::sort(buys.begin(), buys.end(), sort_buy);
+}
+
 AutoShop::~AutoShop()
 {
     for(int i = 0; i < buys.size(); i++)
@@ -86,4 +111,29 @@ AutoShop::~AutoShop()
     {
         delete clients[i];
     }
+}
+
+bool sort_manager(Manager *left, Manager *right) //сортировка от болешего опыта к меньшему
+{
+    return left->get_experience() > right->get_experience();
+}
+
+bool sort_client(Client *left, Client *right) //сортировка по алфавиту фамилий
+{
+    return left->get_last_name() < right->get_last_name();
+}
+
+bool sort_car(Car *left, Car *right) // сортировка по алфавиту моделей
+{
+    return left->get_model() < right->get_model();
+}
+
+bool sort_brand(Brand *left, Brand *right) // сортировка по алфавиту имени брендов
+{
+    return left->get_name() < right->get_name();
+}
+
+bool sort_buy(Buy *left, Buy *right) // сортировка по дате покупки
+{
+    return left->get_date() < right->get_date();
 }
