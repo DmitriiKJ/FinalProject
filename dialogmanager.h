@@ -22,7 +22,11 @@ public:
     void showMan()const;
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_sort_clicked();
+
+    void on_pushButton_add_clicked();
+
+    void on_pushButton_find_clicked();
 
 private:
     Ui::DialogManager *ui;
