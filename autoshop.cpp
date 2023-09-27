@@ -60,6 +60,66 @@ void AutoShop::add_buy_from_database(Client c, Car ca, QDate d)
     buys.push_back(tmp);
 }
 
+void AutoShop::del_manager(int id)
+{
+    auto tmp = std::find(managers.begin(), managers.end(),
+    [id](Manager* t){
+        return t->get_ID() == id;
+    });
+    if(tmp != managers.end())
+    {
+        managers.erase(tmp);
+    }
+}
+
+void AutoShop::del_client(int id)
+{
+    auto tmp = std::find(clients.begin(), clients.end(),
+    [id](Client* t){
+        return t->get_ID() == id;
+    });
+    if(tmp != clients.end())
+    {
+        clients.erase(tmp);
+    }
+}
+
+void AutoShop::del_car(int id)
+{
+    auto tmp = std::find(cars.begin(), cars.end(),
+    [id](Car* t){
+        return t->get_ID() == id;
+    });
+    if(tmp != cars.end())
+    {
+        cars.erase(tmp);
+    }
+}
+
+void AutoShop::del_brand(QString name)
+{
+    auto tmp = std::find(brands.begin(), brands.end(),
+    [name](Brand* t){
+        return t->get_name() == name;
+    });
+    if(tmp != brands.end())
+    {
+        brands.erase(tmp);
+    }
+}
+
+void AutoShop::del_buy(int id) //id машины
+{
+    auto tmp = std::find(buys.begin(), buys.end(),
+    [id](Buy* t){
+        return t->get_car().get_ID() == id;
+    });
+    if(tmp != buys.end())
+    {
+        buys.erase(tmp);
+    }
+}
+
 void AutoShop::sort_managers()
 {
     std::sort(managers.begin(), managers.end(), sort_manager);

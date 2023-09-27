@@ -36,6 +36,13 @@ public:
     void add_brand(QString n, QString i);
     void add_buy_from_database(Client c, Car ca, QDate d);
 
+    // В прэкте удаление не нужно, но по заданию сделаю
+    void del_manager(int id);
+    void del_client(int id);
+    void del_car(int id);
+    void del_brand(QString name);
+    void del_buy(int id);
+
     void sort_managers();
     void sort_clients();
     void sort_cars();
