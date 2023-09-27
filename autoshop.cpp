@@ -62,7 +62,7 @@ void AutoShop::add_buy_from_database(Client c, Car ca, QDate d)
 
 void AutoShop::del_manager(int id)
 {
-    auto tmp = std::find(managers.begin(), managers.end(),
+    auto tmp = std::find_if(managers.begin(), managers.end(),
     [id](Manager* t){
         return t->get_ID() == id;
     });
@@ -74,7 +74,7 @@ void AutoShop::del_manager(int id)
 
 void AutoShop::del_client(int id)
 {
-    auto tmp = std::find(clients.begin(), clients.end(),
+    auto tmp = std::find_if(clients.begin(), clients.end(),
     [id](Client* t){
         return t->get_ID() == id;
     });
@@ -86,7 +86,7 @@ void AutoShop::del_client(int id)
 
 void AutoShop::del_car(int id)
 {
-    auto tmp = std::find(cars.begin(), cars.end(),
+    auto tmp = std::find_if(cars.begin(), cars.end(),
     [id](Car* t){
         return t->get_ID() == id;
     });
@@ -98,7 +98,7 @@ void AutoShop::del_car(int id)
 
 void AutoShop::del_brand(QString name)
 {
-    auto tmp = std::find(brands.begin(), brands.end(),
+    auto tmp = std::find_if(brands.begin(), brands.end(),
     [name](Brand* t){
         return t->get_name() == name;
     });
@@ -110,7 +110,7 @@ void AutoShop::del_brand(QString name)
 
 void AutoShop::del_buy(int id) //id машины
 {
-    auto tmp = std::find(buys.begin(), buys.end(),
+    auto tmp = std::find_if(buys.begin(), buys.end(),
     [id](Buy* t){
         return t->get_car().get_ID() == id;
     });
