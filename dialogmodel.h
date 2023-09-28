@@ -21,7 +21,13 @@ public:
     void showModel()const;
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_add_clicked();
+
+    void on_pushButton_sort_clicked();
+
+    void on_pushButton_price_clicked();
+
+    void on_pushButton_search_clicked();
 
 private:
     Ui::DialogModel *ui;
