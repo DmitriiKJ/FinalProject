@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>697</width>
+    <width>781</width>
     <height>374</height>
    </rect>
   </property>
@@ -27,11 +27,6 @@
    </attribute>
    <column>
     <property name="text">
-     <string>New Column</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
      <string>First name</string>
     </property>
    </column>
@@ -47,14 +42,19 @@
    </column>
    <column>
     <property name="text">
+     <string>Phone number</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
      <string>Address</string>
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_add">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>30</x>
      <y>300</y>
      <width>111</width>
      <height>41</height>
@@ -63,6 +63,120 @@
    <property name="text">
     <string>Add Client</string>
    </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sort_first">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>300</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort by First name</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sort_middle">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>300</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort by Middle name</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sort_last">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>300</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort by Last name</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_search">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>190</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>20</y>
+     <width>197</width>
+     <height>146</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>First name:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_first"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Middle name:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_middle"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Last name:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEdit_last"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>Phone number:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="lineEdit_NUM"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Address:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="lineEdit_address"/>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

@@ -19,6 +19,7 @@ DialogManager::~DialogManager()
 
 void DialogManager::showMan() const
 {
+    ui->tableWidget_manager->setRowCount(0);
     query->clear();
     query->exec("SELECT * FROM Manager");
     int i = 0;
@@ -115,11 +116,11 @@ void DialogManager::on_pushButton_find_clicked()
     QString last = ui->lineEdit_last->text();
     QString phone = ui->lineEdit_phone->text();
 
-    query->prepare("SELECT * FROM Manager WHERE First_name like :f AND Middle_name like :m AND Last_name like :l AND Phone_number like :p AND isFired is null");
-    query->bindValue(":f", "%" + first + "%");
-    query->bindValue(":m", "%" + middle + "%");
-    query->bindValue(":l", "%" + last + "%");
-    query->bindValue(":p", "%" + phone + "%");
+    query->prepare("SELECT * FROM Manager WHERE UPPER(First_name) like :f AND UPPER(Middle_name) like :m AND UPPER(Last_name) like :l AND UPPER(Phone_number) like :p AND isFired is null");
+    query->bindValue(":f", "%" + first.toUpper() + "%");
+    query->bindValue(":m", "%" + middle.toUpper() + "%");
+    query->bindValue(":l", "%" + last.toUpper() + "%");
+    query->bindValue(":p", "%" + phone.toUpper() + "%");
 
     query->exec();
     ui->tableWidget_manager->setRowCount(0);

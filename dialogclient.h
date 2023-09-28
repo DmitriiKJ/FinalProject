@@ -21,7 +21,15 @@ public:
     void showClient()const;
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_add_clicked();
+
+    void on_pushButton_sort_first_clicked();
+
+    void on_pushButton_sort_middle_clicked();
+
+    void on_pushButton_sort_last_clicked();
+
+    void on_pushButton_search_clicked();
 
 private:
     Ui::DialogClient *ui;

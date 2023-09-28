@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>571</width>
+    <height>317</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>371</width>
+     <width>391</width>
      <height>192</height>
     </rect>
    </property>
@@ -27,12 +27,12 @@
    </attribute>
    <column>
     <property name="text">
-     <string>New Column</string>
+     <string>Model</string>
     </property>
    </column>
    <column>
     <property name="text">
-     <string>Model</string>
+     <string>Type</string>
     </property>
    </column>
    <column>
@@ -53,6 +53,77 @@
    <property name="text">
     <string>Add Engine</string>
    </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_search">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>150</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sort_model">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>220</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort by Model</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sort_power">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>220</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort by Power</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>40</y>
+     <width>153</width>
+     <height>78</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_model"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Type:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_type"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Model:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

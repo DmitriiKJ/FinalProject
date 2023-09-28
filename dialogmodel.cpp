@@ -19,6 +19,7 @@ DialogModel::~DialogModel()
 
 void DialogModel::showModel() const
 {
+    ui->tableWidget_model->setRowCount(0);
     query->exec("SELECT * FROM Model");
 
     int i = 0;
