@@ -21,7 +21,13 @@ public:
     void showCar()const;
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_add_clicked();
+
+    void on_pushButton_sort_clicked();
+
+    void on_pushButton_search_clicked();
+
+    void on_pushButton_year_clicked();
 
 private:
     Ui::DialogCar *ui;
