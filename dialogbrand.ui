@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Brands</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">;</string>
+  </property>
   <widget class="QTableWidget" name="tableWidget_Brand">
    <property name="geometry">
     <rect>
@@ -75,7 +78,7 @@
     <string>Search</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>

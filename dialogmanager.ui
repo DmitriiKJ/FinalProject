@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Managers</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QTableWidget" name="tableWidget_manager">
    <property name="geometry">
     <rect>
@@ -95,7 +98,7 @@
     <string>Find</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -104,22 +107,39 @@
      <height>101</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="2">
      <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>Middle:</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_first"/>
+     <widget class="QLineEdit" name="lineEdit_first">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
     </item>
     <item row="0" column="3">
-     <widget class="QLineEdit" name="lineEdit_middle"/>
+     <widget class="QLineEdit" name="lineEdit_middle">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
     </item>
     <item row="1" column="2">
      <widget class="QLabel" name="label_4">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>Phone:</string>
       </property>
@@ -127,23 +147,37 @@
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>Last:</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_last"/>
+     <widget class="QLineEdit" name="lineEdit_last">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>First:</string>
       </property>
      </widget>
     </item>
     <item row="1" column="3">
-     <widget class="QLineEdit" name="lineEdit_phone"/>
+     <widget class="QLineEdit" name="lineEdit_phone">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

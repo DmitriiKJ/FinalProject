@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Buys</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QTableWidget" name="tableWidget_buy">
    <property name="geometry">
     <rect>
@@ -80,7 +83,7 @@
     <string>Search by Client</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>300</x>
