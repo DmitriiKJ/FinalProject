@@ -23,6 +23,10 @@ public:
 private slots:
     void on_pushButton_add_clicked();
 
+    void on_pushButton_sort_clicked();
+
+    void on_pushButton_search_clicked();
+
 private:
     Ui::DialogBrand *ui;
     QSqlQuery *query;

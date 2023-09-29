@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>601</width>
-    <height>316</height>
+    <width>534</width>
+    <height>302</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>361</width>
+     <width>391</width>
      <height>231</height>
     </rect>
    </property>
@@ -27,7 +27,7 @@
    </attribute>
    <column>
     <property name="text">
-     <string>New Column</string>
+     <string>Name</string>
     </property>
    </column>
    <column>
@@ -39,15 +39,63 @@
   <widget class="QPushButton" name="pushButton_add">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>410</x>
      <y>20</y>
-     <width>101</width>
-     <height>51</height>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
     <string>Add Brand</string>
    </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_sort">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>90</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sort by Name</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_search">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>250</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Name:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_name"/>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
