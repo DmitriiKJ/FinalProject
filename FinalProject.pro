@@ -26,8 +26,10 @@ SOURCES += \
     dialogcar.cpp \
     dialogclient.cpp \
     dialogengine.cpp \
+    dialogfiremanager.cpp \
     dialogmanager.cpp \
     dialogmodel.cpp \
+    dialogrestoremanager.cpp \
     human.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -51,8 +53,10 @@ HEADERS += \
     dialogcar.h \
     dialogclient.h \
     dialogengine.h \
+    dialogfiremanager.h \
     dialogmanager.h \
     dialogmodel.h \
+    dialogrestoremanager.h \
     human.h \
     mainwindow.h \
     manager.h
@@ -70,8 +74,10 @@ FORMS += \
     dialogcar.ui \
     dialogclient.ui \
     dialogengine.ui \
+    dialogfiremanager.ui \
     dialogmanager.ui \
     dialogmodel.ui \
+    dialogrestoremanager.ui \
     mainwindow.ui
 
 # Default rules for deployment.

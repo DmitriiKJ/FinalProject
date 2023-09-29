@@ -6,6 +6,8 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QDate>
+#include "dialogfiremanager.h"
+#include "dialogrestoremanager.h"
 
 namespace Ui {
 class DialogManager;
@@ -28,10 +30,16 @@ private slots:
 
     void on_pushButton_find_clicked();
 
+    void on_pushButton_fire_clicked();
+
+    void on_pushButton_restore_clicked();
+
 private:
     Ui::DialogManager *ui;
     DialogAddManager* addManager;
     QSqlQuery* query;
+    DialogFireManager *fire;
+    DialogRestoreManager *restore;
 };
 
 #endif // DIALOGMANAGER_H

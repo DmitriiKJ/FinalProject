@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     QString connectString = "Driver={SQL Server};";
     connectString.append("Server=DESKTOP-QDVET6F\\SQLEXPRESS;");
     connectString.append("Database=AutoShop;");
+    connectString.append("Uid=sa;");
+    connectString.append("Pwd=16112006Di;");
     db.setDatabaseName(connectString);
 
     if(db.open())

@@ -62,9 +62,9 @@
   <widget class="QPushButton" name="pushButton_add">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>350</y>
-     <width>101</width>
+     <x>0</x>
+     <y>330</y>
+     <width>111</width>
      <height>41</height>
     </rect>
    </property>
@@ -75,8 +75,8 @@
   <widget class="QPushButton" name="pushButton_sort">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>400</y>
+     <x>120</x>
+     <y>330</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -180,6 +180,32 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_fire">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>380</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fire Manager</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_restore">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>380</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Restore Manager</string>
+   </property>
   </widget>
  </widget>
  <resources/>

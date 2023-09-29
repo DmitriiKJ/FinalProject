@@ -8,6 +8,8 @@ DialogManager::DialogManager(QSqlDatabase &db, QWidget *parent) :
     ui->setupUi(this);
     addManager = new DialogAddManager(db);
     query = new QSqlQuery(db);
+    fire = new DialogFireManager(db);
+    restore = new DialogRestoreManager(db);
 }
 
 DialogManager::~DialogManager()
@@ -15,13 +17,15 @@ DialogManager::~DialogManager()
     delete ui;
     delete addManager;
     delete query;
+    delete restore;
+    delete fire;
 }
 
 void DialogManager::showMan() const
 {
     ui->tableWidget_manager->setRowCount(0);
     query->clear();
-    query->exec("SELECT * FROM Manager");
+    query->exec("SELECT * FROM Manager WHERE isFired is NULL");
     int i = 0;
     while(query->next())
     {
@@ -159,5 +163,21 @@ void DialogManager::on_pushButton_find_clicked()
 
         i++;
     }
+}
+
+
+void DialogManager::on_pushButton_fire_clicked()
+{
+    fire->update_info();
+    fire->show();
+    this->close();
+}
+
+
+void DialogManager::on_pushButton_restore_clicked()
+{
+    restore->update_info();
+    restore->show();
+    this->close();
 }
 
