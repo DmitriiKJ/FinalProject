@@ -32,32 +32,57 @@ QVector<Buy *> AutoShop::get_buys() const
 
 void AutoShop::add_manager(int i, QString f, QString m, QString l, QString p, QDate d, int e)
 {
-    Manager* tmp = new Manager(i, f,m,l,p,d,e);
-    managers.push_back(tmp);
+    try{
+        Manager* tmp = new Manager(i,f,m,l,p,d,e);
+        managers.push_back(tmp);
+    } catch(const QString s)
+    {
+        qDebug() << s;
+    }
 }
 
 void AutoShop::add_client(int i, QString f, QString m, QString l, QString p, QString a)
 {
-    Client* tmp = new Client(i, f,m,l,p,a);
-    clients.push_back(tmp);
+    try{
+        Client* tmp = new Client(i,f,m,l,p,a);
+        clients.push_back(tmp);
+    } catch(const QString s)
+    {
+        qDebug() << s;
+    }
 }
 
 void AutoShop::add_car(int i, QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma)
 {
-    Car* tmp = new Car(i, m,b,p,em,et,power,br,year,ma);
-    cars.push_back(tmp);
+    try{
+        Car* tmp = new Car(i,m,b,p,em,et,power,br,year,ma);
+        cars.push_back(tmp);
+    } catch(const QString s)
+    {
+        qDebug() << s;
+    }
 }
 
 void AutoShop::add_brand(QString n, QString i)
 {
-    Brand* tmp = new Brand(n,i);
-    brands.push_back(tmp);
+    try{
+        Brand* tmp = new Brand(n,i);
+        brands.push_back(tmp);
+    } catch(const QString s)
+    {
+        qDebug() << s;
+    }
 }
 
 void AutoShop::add_buy_from_database(Client c, Car ca, QDate d)
 {
-    Buy*tmp = new Buy(c, ca, d);
-    buys.push_back(tmp);
+    try{
+        Buy*tmp = new Buy(c, ca, d);
+        buys.push_back(tmp);
+    } catch(const QString s)
+    {
+        qDebug() << s;
+    }
 }
 
 void AutoShop::del_manager(int id)
@@ -145,6 +170,66 @@ void AutoShop::sort_buys()
     std::sort(buys.begin(), buys.end(), sort_buy);
 }
 
+Manager *AutoShop::find_manager(QString number) const
+{
+    for(auto item : managers)
+    {
+        if(item->get_phone_number() == number)
+        {
+            return item;
+        }
+    }
+    return nullptr;
+}
+
+Client *AutoShop::find_client(QString number) const
+{
+    for(auto item : clients)
+    {
+        if(item->get_phone_number() == number)
+        {
+            return item;
+        }
+    }
+    return nullptr;
+}
+
+Car *AutoShop::find_car(int id) const
+{
+    for(auto item : cars)
+    {
+        if(item->get_ID() == id)
+        {
+            return item;
+        }
+    }
+    return nullptr;
+}
+
+Brand *AutoShop::find_brand(QString name) const
+{
+    for(auto item : brands)
+    {
+        if(item->get_name() == name)
+        {
+            return item;
+        }
+    }
+    return nullptr;
+}
+
+Buy *AutoShop::find_buy(int id_car) const
+{
+    for(auto item : buys)
+    {
+        if(item->get_car().get_ID() == id_car)
+        {
+            return item;
+        }
+    }
+    return nullptr;
+}
+
 AutoShop::~AutoShop()
 {
     for(int i = 0; i < buys.size(); i++)
@@ -173,7 +258,7 @@ AutoShop::~AutoShop()
     }
 }
 
-bool sort_manager(Manager *left, Manager *right) //сортировка от болешего опыта к меньшему
+bool sort_manager(Manager *left, Manager *right) //сортировка от большего опыта к меньшему
 {
     return left->get_experience() > right->get_experience();
 }

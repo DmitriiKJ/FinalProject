@@ -17,12 +17,7 @@ class AutoShop
     QVector<Buy*> buys;
 
 public:
-    AutoShop(); // позже будет загрузка из баззы данных
-
-    // в будущем
-    // через интерфейс будет возможность покупки машины(машина удаляется из массива машин и добавляется в покупки) и завоза новых машин
-    // добавление клиентов и менеджеров
-    // добавление брендов
+    AutoShop();
 
     QVector<Manager*> get_managers()const;
     QVector<Client*> get_clients()const;
@@ -30,24 +25,33 @@ public:
     QVector<Brand*> get_brands()const;
     QVector<Buy*> get_buys()const;
 
+    // Добавление
     void add_manager(int i, QString f, QString m, QString l, QString p, QDate d, int e);
     void add_client(int i, QString f, QString m, QString l, QString p, QString a);
     void add_car(int i, QString m, QString b, double p, QString em, QString et, int power, Brand br, int year, Manager ma);
     void add_brand(QString n, QString i);
     void add_buy_from_database(Client c, Car ca, QDate d);
 
-    // В прэкте удаление не нужно, но по заданию сделаю
+    // В проэкте удаление не нужно, но по заданию сделаю
     void del_manager(int id);
     void del_client(int id);
     void del_car(int id);
     void del_brand(QString name);
     void del_buy(int id);
 
+    // Сортировка
     void sort_managers();
     void sort_clients();
     void sort_cars();
     void sort_brands();
     void sort_buys();
+
+    // Поиск
+    Manager* find_manager(QString number)const;
+    Client* find_client(QString number)const;
+    Car* find_car(int id)const;
+    Brand* find_brand(QString name)const;
+    Buy* find_buy(int id_car)const;
 
     ~AutoShop();
 };
