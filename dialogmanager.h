@@ -34,6 +34,8 @@ private slots:
 
     void on_pushButton_restore_clicked();
 
+    void on_pushButton_fired_clicked();
+
 private:
     Ui::DialogManager *ui;
     DialogAddManager* addManager;
